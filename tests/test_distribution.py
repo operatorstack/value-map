@@ -59,6 +59,7 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("`PROPOSED`", skill)
         self.assertIn("Do not include a full claim/evidence table", skill)
 
+    @unittest.skipIf(os.name == "nt", "Bash file-URI integration is POSIX-specific")
     def test_bash_installer_places_verified_codex_skill(self) -> None:
         with tempfile.TemporaryDirectory() as assets_dir, tempfile.TemporaryDirectory() as home_dir:
             assets = Path(assets_dir)
