@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Value Map</title>
+  <desc id="desc">Two source claims cross an evidence boundary and converge into a value point.</desc>
+  <rect width="96" height="96" rx="12" fill="#F3F0E8"/>
+  <path d="M78 31V16H16V80H78V65" fill="none" stroke="#17211B" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M48 24V72" fill="none" stroke="#17211B" stroke-width="4" opacity=".28"/>
+  <path d="M31 34L65 47M31 62L65 49" fill="none" stroke="#147D64" stroke-width="6" stroke-linecap="square"/>
+  <circle cx="27" cy="32" r="7" fill="#17211B"/>
+  <circle cx="27" cy="64" r="7" fill="#17211B"/>
+  <circle cx="70" cy="48" r="10" fill="#D36B3F"/>
+</svg>
+
