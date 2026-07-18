@@ -95,6 +95,13 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("grep -qx 'skip-release'", workflow)
         self.assertIn('next="v0.1.0"', workflow)
 
+    def test_sync_accepts_exact_publisher_dispatch_with_polling_fallback(self) -> None:
+        workflow = (ROOT / ".github/workflows/sync-upstream.yml").read_text()
+        self.assertIn("source_commit:", workflow)
+        self.assertIn("Operator Stack Publisher", workflow)
+        self.assertIn("inputs.source_commit || 'main'", workflow)
+        self.assertIn('cron: "23 */6 * * *"', workflow)
+
 
 if __name__ == "__main__":
     unittest.main()
