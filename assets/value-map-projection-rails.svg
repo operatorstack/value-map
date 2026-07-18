@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc">
+  <title id="title">How Value Map works</title>
+  <desc id="desc">An external message and current codebase remain separate until Value Map projects preserved source meaning against classified code evidence, producing a conversational value hypothesis for human judgment.</desc>
+  <style>
+    .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17211b }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #17211b }
+    .eyebrow { font-size: 14px; font-weight: 750; letter-spacing: 2px }
+    .heading { font-size: 44px; font-weight: 760; letter-spacing: -2px }
+    .section { font-size: 13px; font-weight: 750; letter-spacing: 1.5px; fill: #68716c }
+    .body { font-size: 17px; font-weight: 450 }
+    .strong { font-size: 19px; font-weight: 700 }
+    .quote { font-size: 20px; font-weight: 650 }
+    .result { font-size: 34px; font-weight: 760; letter-spacing: -1.2px; fill: #f3f0e8 }
+    .result-small { font-size: 14px; font-weight: 650; letter-spacing: 1px; fill: #d6d8d2 }
+  </style>
+  <rect width="1440" height="900" fill="#f3f0e8"/>
+
+  <text x="68" y="72" class="mono eyebrow" fill="#147d64">VALUE MAP / PROJECTION RAILS</text>
+  <text x="68" y="122" class="sans heading">How Value Map works</text>
+  <text x="970" y="78" class="sans body" fill="#68716c">Preserve what was said. Inspect what the code supports.</text>
+  <text x="970" y="104" class="sans body" fill="#68716c">Compare them without blending the two.</text>
+  <line x1="68" y1="174" x2="1372" y2="174" stroke="#cdc8bb"/>
+
+  <rect x="68" y="218" width="740" height="244" fill="#faf8f2" stroke="#cdc8bb"/>
+  <rect x="68" y="218" width="5" height="244" fill="#147d64"/>
+  <line x1="394" y1="218" x2="394" y2="462" stroke="#cdc8bb"/>
+  <text x="98" y="255" class="mono section">01 / EXACT EXTERNAL MESSAGE</text>
+  <text x="98" y="286" class="mono quote">
+    <tspan x="98" dy="0">“Customers can save</tspan>
+    <tspan x="98" dy="27">workflow templates,</tspan>
+    <tspan x="98" dy="27">but they can’t run one</tspan>
+    <tspan x="98" dy="27">on a real project or</tspan>
+    <tspan x="98" dy="27">see a result.”</tspan>
+  </text>
+  <text x="420" y="255" class="mono section">PRESERVED SOURCE MEANING</text>
+  <text x="420" y="296" class="sans body"><tspan fill="#147d64" font-weight="800">—</tspan><tspan dx="10">Users already have saved intent.</tspan></text>
+  <text x="420" y="337" class="sans body"><tspan fill="#147d64" font-weight="800">—</tspan><tspan dx="10">The unresolved gap is running it against</tspan></text>
+  <text x="448" y="360" class="sans body">a project and seeing a result.</text>
+  <text x="420" y="401" class="sans body"><tspan fill="#147d64" font-weight="800">—</tspan><tspan dx="10">The desired outcome is one useful,</tspan></text>
+  <text x="448" y="424" class="sans body">traceable project result.</text>
+
+  <rect x="68" y="488" width="740" height="244" fill="#faf8f2" stroke="#cdc8bb"/>
+  <rect x="68" y="488" width="5" height="244" fill="#17211b"/>
+  <line x1="394" y1="488" x2="394" y2="732" stroke="#cdc8bb"/>
+  <text x="98" y="525" class="mono section">02 / CURRENT CODEBASE</text>
+  <text x="98" y="566" class="sans strong">Inspect the minimal code slice</text>
+  <text x="98" y="594" class="sans strong">needed to test the message.</text>
+  <text x="420" y="525" class="mono section">CLASSIFIED CODE EVIDENCE</text>
+  <text x="420" y="569" class="mono eyebrow" fill="#147d64">EXISTING</text>
+  <text x="530" y="569" class="sans strong">Template configuration</text>
+  <line x1="420" y1="584" x2="780" y2="584" stroke="#cdc8bb"/>
+  <text x="420" y="616" class="mono eyebrow" fill="#b08a24">PARTIAL</text>
+  <text x="530" y="616" class="sans strong">Project context</text>
+  <line x1="420" y1="631" x2="780" y2="631" stroke="#cdc8bb"/>
+  <text x="420" y="663" class="mono eyebrow" fill="#d36b3f">PROPOSED</text>
+  <text x="530" y="663" class="sans strong">Controlled execution</text>
+
+  <path d="M808 340 H860 Q878 340 878 358 V407 Q878 425 896 425" fill="none" stroke="#147d64" stroke-width="5"/>
+  <circle cx="808" cy="340" r="8" fill="#f3f0e8" stroke="#147d64" stroke-width="3"/>
+  <path d="M808 610 H860 Q878 610 878 592 V543 Q878 525 896 525" fill="none" stroke="#17211b" stroke-width="5"/>
+  <circle cx="808" cy="610" r="8" fill="#f3f0e8" stroke="#17211b" stroke-width="3"/>
+  <text x="834" y="392" class="mono section">PROJECTION</text>
+  <rect x="896" y="404" width="34" height="142" fill="none" stroke="#17211b" stroke-width="7"/>
+  <line x1="930" y1="475" x2="996" y2="475" stroke="#d36b3f" stroke-width="5"/>
+  <circle cx="996" cy="475" r="7" fill="#d36b3f"/>
+
+  <rect x="1014" y="218" width="358" height="514" fill="#17211b"/>
+  <path d="M1046 254h31m-31 0v28m0 0h20" fill="none" stroke="#f3f0e8" stroke-width="4"/>
+  <text x="1046" y="326" class="mono result-small">CONVERSATIONAL VALUE MAP</text>
+  <text x="1046" y="380" class="sans result">From saved intent</text>
+  <text x="1046" y="427" class="sans result" fill="#d36b3f">→</text>
+  <text x="1046" y="480" class="sans result">one useful,</text>
+  <text x="1046" y="523" class="sans result">traceable</text>
+  <text x="1046" y="566" class="sans result">project result</text>
+  <line x1="1046" y1="596" x2="1340" y2="596" stroke="#6d756f"/>
+  <text x="1046" y="628" class="mono result-small">Repo-grounded, testable</text>
+  <text x="1046" y="650" class="mono result-small">value hypothesis</text>
+  <rect x="1046" y="674" width="294" height="46" fill="#d36b3f"/>
+  <text x="1064" y="704" class="sans strong" fill="#fff">You decide what matters.</text>
+
+  <line x1="68" y1="820" x2="1372" y2="820" stroke="#cdc8bb"/>
+  <text x="68" y="853" class="sans body"><tspan font-weight="750">Preserve meaning.</tspan><tspan fill="#68716c"> Classify evidence. Expose the gap.</tspan></text>
+  <text x="928" y="853" class="mono section">MESSAGE + CODE → VALUE HYPOTHESIS → JUDGMENT</text>
+</svg>

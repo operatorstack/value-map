@@ -49,11 +49,7 @@ Business language and code drift apart easily. A confident summary may describe 
 
 Value Map keeps two sources of authority separate:
 
-```text
-external message  ──► source meaning ──┐
-                                       ├──► conversational value map
-current codebase  ──► code evidence ───┘
-```
+![How Value Map projects preserved source meaning against classified code evidence](assets/value-map-projection-rails.svg)
 
 It reports capabilities with explicit status:
 
