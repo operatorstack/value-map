@@ -118,6 +118,18 @@ Value Map uses deterministic checks for the parts that should not depend on tast
 
 An LLM still performs semantic projection, so the result is not a scientific measurement of whether an idea or sender is good. It is a traceable, falsifiable interpretation. The final judgment remains yours.
 
+## Testing and benchmarks
+
+Value Map is checked with deterministic lineage and evidence gates,
+metamorphic tests, staged smoke cases, and a live inverse benchmark that holds
+one external message constant while changing the underlying code truth. The
+latest three-call Gemini Flash run passed every inverse gate and both negative
+controls. This validates the operator on a controlled fixture; it is not a
+claim of general accuracy across products or conversations.
+
+See the [benchmark record](https://github.com/operatorstack/intelligence-flow/blob/main/labs/14-product-value-projection/BENCHMARK.md)
+and its reproducible evaluator in Intelligence Flow.
+
 ## Source and releases
 
 The canonical operator and evaluation work lives in [Intelligence Flow](https://github.com/operatorstack/intelligence-flow/tree/main/labs/14-product-value-projection). This repository owns the public product surface, installation, compatibility checks, and releases.
