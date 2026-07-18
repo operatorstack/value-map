@@ -13,7 +13,9 @@ esac
 
 command -v curl >/dev/null 2>&1 || { echo "BLOCKED: curl is required" >&2; exit 2; }
 
-if [ "$version" = "latest" ]; then
+if [ -n "${VALUE_MAP_BASE_URL:-}" ]; then
+  base="$VALUE_MAP_BASE_URL"
+elif [ "$version" = "latest" ]; then
   base="https://github.com/${repository}/releases/latest/download"
 else
   base="https://github.com/${repository}/releases/download/${version}"
@@ -53,4 +55,3 @@ esac
 mkdir -p "$(dirname "$destination")"
 cp "$skill" "$destination"
 echo "Installed Value Map for $host at $destination"
-

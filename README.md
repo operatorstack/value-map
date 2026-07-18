@@ -4,9 +4,11 @@
 
 <h1 align="center">Value Map</h1>
 
-<p align="center"><strong>Know what matters before you build what doesn’t.</strong></p>
+<p align="center"><strong>Map the idea. Check the code. Decide what matters.</strong></p>
 
 Paste a message, post, or half-formed idea. Value Map helps you understand what a CEO, customer, product person, Hacker News post, LinkedIn post, or tweet could mean for the product you have—or are just starting. It grounds the interpretation in your code and project context, showing what exists, what may need building, where the potential value is, and when an appealing outside idea does not yet have enough evidence to fit.
+
+It does not score the sender or declare an idea valuable. It separates the idea from the available evidence and returns a testable value hypothesis so you can decide what deserves attention.
 
 ```text
 /value-map "We can configure workflow templates, but customers cannot run one on a real project..."
@@ -113,6 +115,12 @@ PowerShell users can run `install.ps1` with `-HostName codex`, `cursor`, or `cla
 Value Map first projects the external message without reading the repository. It preserves actors, capabilities, constraints, uncertainty, negation, and sequence. Those relations become targeted repository searches for the smallest relevant entry points, interfaces, decision functions, tests, and reliability boundaries.
 
 The two slices are joined without letting code terminology overwrite business meaning. Repository evidence can support, correct, contradict, or leave a claim unresolved. A contradiction in a core value relation blocks the hypothesis.
+
+## Evidence, not a verdict
+
+Value Map uses deterministic checks for the parts that should not depend on taste: the response stays bound to the exact source, projected claims retain their source lineage, repository claims cite inspected paths, contradictions remain visible, unknowns do not silently become assumptions, and the smallest proof has an observable signal.
+
+An LLM still performs semantic projection, so the result is not a scientific measurement of whether an idea or sender is good. It is a traceable, falsifiable interpretation. The final judgment remains yours.
 
 ## Source and releases
 

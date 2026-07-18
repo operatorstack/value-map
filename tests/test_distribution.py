@@ -4,6 +4,8 @@ import hashlib
 import importlib.util
 import json
 import re
+import os
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -56,6 +58,42 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("opening move in a conversation", skill)
         self.assertIn("`PROPOSED`", skill)
         self.assertIn("Do not include a full claim/evidence table", skill)
+
+    def test_bash_installer_places_verified_codex_skill(self) -> None:
+        with tempfile.TemporaryDirectory() as assets_dir, tempfile.TemporaryDirectory() as home_dir:
+            assets = Path(assets_dir)
+            skill = ROOT / "value-map/SKILL.md"
+            copied = assets / "value-map-SKILL.md"
+            copied.write_bytes(skill.read_bytes())
+            digest = hashlib.sha256(copied.read_bytes()).hexdigest()
+            (assets / "value-map-SKILL.md.sha256").write_text(
+                f"{digest}  value-map-SKILL.md\n"
+            )
+            environment = os.environ.copy()
+            environment.update(
+                {
+                    "HOME": home_dir,
+                    "VALUE_MAP_HOST": "codex",
+                    "VALUE_MAP_BASE_URL": assets.as_uri(),
+                }
+            )
+            subprocess.run(
+                ["bash", str(ROOT / "install.sh")],
+                check=True,
+                env=environment,
+                capture_output=True,
+                text=True,
+            )
+            installed = Path(home_dir) / ".codex/skills/value-map/SKILL.md"
+            self.assertEqual(installed.read_bytes(), skill.read_bytes())
+
+    def test_release_policy_defaults_to_patch_with_label_overrides(self) -> None:
+        workflow = (ROOT / ".github/workflows/release.yml").read_text()
+        self.assertIn('default: patch', workflow)
+        self.assertIn("grep -qx 'minor'", workflow)
+        self.assertIn("grep -qx 'major'", workflow)
+        self.assertIn("grep -qx 'skip-release'", workflow)
+        self.assertIn('next="v0.1.0"', workflow)
 
 
 if __name__ == "__main__":

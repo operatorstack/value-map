@@ -8,7 +8,9 @@ param(
 
 $ErrorActionPreference = "Stop"
 $repository = "operator-stack/value-map"
-$base = if ($Version -eq "latest") {
+$base = if ($env:VALUE_MAP_BASE_URL) {
+  $env:VALUE_MAP_BASE_URL
+} elseif ($Version -eq "latest") {
   "https://github.com/$repository/releases/latest/download"
 } else {
   "https://github.com/$repository/releases/download/$Version"
