@@ -7,7 +7,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$repository = "operator-stack/value-map"
+$repository = "operatorstack/value-map"
 $base = if ($env:VALUE_MAP_BASE_URL) {
   $env:VALUE_MAP_BASE_URL
 } elseif ($Version -eq "latest") {

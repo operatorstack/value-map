@@ -10,7 +10,7 @@ import re
 from pathlib import Path
 
 
-GENERATOR = "operator-stack/value-map:project-upstream"
+GENERATOR = "operatorstack/value-map:project-upstream"
 SOURCE_REPOSITORY = "operatorstack/intelligence-flow"
 SOURCE_PATH = Path("labs/14-product-value-projection/value-map/SKILL.md")
 MANIFEST = Path("UPSTREAM.json")

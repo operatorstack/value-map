@@ -91,13 +91,13 @@ Value Map supports Codex, Cursor, and Claude Code. Install the latest verified r
 ### Codex
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/operator-stack/value-map/main/install.sh | VALUE_MAP_HOST=codex bash
+curl -fsSL https://raw.githubusercontent.com/operatorstack/value-map/main/install.sh | VALUE_MAP_HOST=codex bash
 ```
 
 ### Cursor
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/operator-stack/value-map/main/install.sh | VALUE_MAP_HOST=cursor VALUE_MAP_REPO="$PWD" bash
+curl -fsSL https://raw.githubusercontent.com/operatorstack/value-map/main/install.sh | VALUE_MAP_HOST=cursor VALUE_MAP_REPO="$PWD" bash
 ```
 
 Reload Cursor after installation, then invoke `/value-map "..."`.
@@ -105,7 +105,7 @@ Reload Cursor after installation, then invoke `/value-map "..."`.
 ### Claude Code
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/operator-stack/value-map/main/install.sh | VALUE_MAP_HOST=claude bash
+curl -fsSL https://raw.githubusercontent.com/operatorstack/value-map/main/install.sh | VALUE_MAP_HOST=claude bash
 ```
 
 PowerShell users can run `install.ps1` with `-HostName codex`, `cursor`, or `claude`.

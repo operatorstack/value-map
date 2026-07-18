@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-repository="operator-stack/value-map"
+repository="operatorstack/value-map"
 version="${VALUE_MAP_VERSION:-latest}"
 host="${VALUE_MAP_HOST:-}"
 target_repo="${VALUE_MAP_REPO:-$PWD}"

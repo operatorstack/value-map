@@ -2,7 +2,7 @@
   "files": {
     "value-map/SKILL.md": "8066b250d0f726dfd52aa52c527b828117c1648c76d7a7853c5ad98d23f75b20"
   },
-  "generator": "operator-stack/value-map:project-upstream",
+  "generator": "operatorstack/value-map:project-upstream",
   "schema_version": 1,
   "source": {
     "commit": "adb078e2e05ada5ae5bea6ff10788793ef29dd59",
