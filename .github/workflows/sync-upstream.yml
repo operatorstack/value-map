@@ -22,6 +22,16 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Create Operator Stack Publisher token
+        id: publisher-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.OPERATOR_STACK_PUBLISHER_APP_CLIENT_ID || vars.BOATSTACK_APP_CLIENT_ID }}
+          private-key: ${{ secrets.OPERATOR_STACK_PUBLISHER_APP_PRIVATE_KEY || secrets.BOATSTACK_APP_PRIVATE_KEY }}
+          owner: operatorstack
+          repositories: value-map
+          permission-contents: read
+          permission-pull-requests: write
       - name: Check out Value Map
         uses: actions/checkout@v4
         with:
@@ -49,7 +59,7 @@ jobs:
           echo "source_commit=$source_commit" >> "$GITHUB_OUTPUT"
       - name: Open generated pull request
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.publisher-token.outputs.token }}
           SOURCE_COMMIT: ${{ steps.project.outputs.source_commit }}
         shell: bash
         run: |

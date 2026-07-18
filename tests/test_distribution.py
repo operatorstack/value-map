@@ -102,6 +102,9 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("Operator Stack Publisher", workflow)
         self.assertIn("inputs.source_commit || 'main'", workflow)
         self.assertIn('cron: "23 */6 * * *"', workflow)
+        self.assertIn("actions/create-github-app-token@v3", workflow)
+        self.assertIn("steps.publisher-token.outputs.token", workflow)
+        self.assertNotIn("GH_TOKEN: ${{ github.token }}", workflow)
 
 
 if __name__ == "__main__":
