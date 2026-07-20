@@ -42,6 +42,7 @@ jobs:
           repository: operatorstack/intelligence-flow
           ref: ${{ inputs.source_commit || 'main' }}
           path: intelligence-flow
+          fetch-depth: 0
       - name: Project canonical skill
         id: project
         shell: bash
@@ -78,10 +79,10 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git switch -c "$branch"
+          git checkout -B "$branch"
           git add value-map/SKILL.md UPSTREAM.json
           git commit -m "Sync Value Map from Intelligence Flow $short"
-          git push --set-upstream origin "$branch"
+          git push --force --set-upstream origin "$branch"
           pr_url="$(gh pr create \
             --base main \
             --head "$branch" \
