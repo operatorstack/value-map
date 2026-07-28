@@ -101,9 +101,12 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("source_commit:", workflow)
         self.assertIn("Operator Stack Publisher", workflow)
         self.assertIn("inputs.source_commit || 'main'", workflow)
-        self.assertIn('cron: "23 */6 * * *"', workflow)
+        self.assertIn('cron: "9 */6 * * *"', workflow)
         self.assertIn("actions/create-github-app-token@v3", workflow)
-        self.assertIn("steps.publisher-token.outputs.token", workflow)
+        self.assertIn("steps.app-token.outputs.token", workflow)
+        self.assertIn("permission-contents: write", workflow)
+        self.assertIn('gh pr merge "$pr_url" --auto --squash', workflow)
+        self.assertIn("required_status_checks", workflow)
         self.assertNotIn("GH_TOKEN: ${{ github.token }}", workflow)
 
 
