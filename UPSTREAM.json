@@ -5,7 +5,7 @@
   "generator": "operatorstack/value-map:project-upstream",
   "schema_version": 1,
   "source": {
-    "commit": "c7c89a11d5f0933d6ff2d8df593b720f70f95af3",
+    "commit": "44cdd76953435a74daac53faa5917bbb19deb014",
     "path": "labs/14-product-value-projection/value-map",
     "repository": "operatorstack/intelligence-flow"
   }
