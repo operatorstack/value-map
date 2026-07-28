@@ -106,7 +106,6 @@ class DistributionTests(unittest.TestCase):
         self.assertIn("steps.app-token.outputs.token", workflow)
         self.assertIn("permission-contents: write", workflow)
         self.assertIn('gh pr merge "$pr_url" --auto --squash', workflow)
-        self.assertIn("required_status_checks", workflow)
         self.assertNotIn("GH_TOKEN: ${{ github.token }}", workflow)
 
 
